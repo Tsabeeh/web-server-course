@@ -24,10 +24,10 @@ app.use((req,res,next)=>{
 
 
 
-app.use((req,res,next)=>{
+/*app.use((req,res,next)=>{
 
 res.render('maintenance.hbs');
-});
+});*/
 
 
 
@@ -56,10 +56,19 @@ app.get('/about', (req,res)=>{
   });
 });
 
+app.get('/gift', (req,res)=>{
+  res.render('gift.hbs', {
+  TittleName :'gift page'
+
+  });
+});
+
 app.get('/bad',(req,res)=>{
   res.send({
 errorMessage: 'unable to start '
 });
+
+
 
 });
 app.listen( port , ()=>{
